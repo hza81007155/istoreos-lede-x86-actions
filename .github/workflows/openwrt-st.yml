@@ -10,7 +10,7 @@
 # See /LICENSE for more information.
 #
 
-name: openwrt-st
+name: Openwrt-ST
 
 on:
   repository_dispatch:
