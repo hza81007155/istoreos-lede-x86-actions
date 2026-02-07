@@ -10,7 +10,7 @@
 # See /LICENSE for more information.
 #
 # 选择6.6内核
-sed -i 's/6.12/6.6/g' target/linux/x86/Makefile
+#sed -i 's/6.12/6.6/g' target/linux/x86/Makefile
 # 设置默认ip
 sed -i 's/192.168.1.1/192.168.10.12/g' package/base-files/luci/bin/config_generate
 sed -i 's/192.168.1.1/192.168.10.12/g' package/base-files/files/bin/config_generate
@@ -55,11 +55,14 @@ git clone https://github.com/jerrykuku/luci-app-argon-config.git package/luci-ap
 git clone https://github.com/sirpdboy/luci-app-lucky.git package/lucky
 #git clone --depth=1 -b master https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
 git clone --depth=1 -b master https://github.com/vernesong/OpenClash package/luci-app-openclash
-git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt-passwall
-git clone --depth=1 -b main https://github.com/Openwrt-Passwall/openwrt-passwall package/luci-app-passwall
-git clone --depth=1 -b main https://github.com/Openwrt-Passwall/openwrt-passwall2 package/openwrt-passwall2
 git clone https://github.com/sirpdboy/luci-app-taskplan package/luci-app-taskplan
 git clone https://github.com/miaoermua/luci-app-leigod-acc package/luci-app-leigod-acc
+
+# passwall
+rm -rf feeds/packages/net/{xray-core,v2ray-geodata,sing-box,chinadns-ng,dns2socks,hysteria,ipt2socks,microsocks,naiveproxy,shadowsocks-libev,shadowsocks-rust,shadowsocksr-libev,simple-obfs,tcping,trojan-plus,tuic-client,v2ray-plugin,xray-plugin,geoview,shadow-tls}
+git clone https://github.com/Openwrt-Passwall/openwrt-passwall-packages package/passwall-packages
+rm -rf feeds/luci/applications/luci-app-passwall
+git clone https://github.com/Openwrt-Passwall/openwrt-passwall package/passwall-luci
 
 # 18.06 Argone theme
 git clone --depth=1 -b main https://github.com/hza81007155/luci-theme-argone package/luci-theme-argone
