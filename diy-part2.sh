@@ -56,7 +56,6 @@ git clone https://github.com/sirpdboy/luci-app-lucky.git package/lucky
 #git clone --depth=1 -b master https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
 git clone https://github.com/sirpdboy/luci-app-taskplan package/luci-app-taskplan
 git clone https://github.com/miaoermua/luci-app-leigod-acc package/luci-app-leigod-acc
-git clone --depth=1 --single-branch https://github.com/sirpdboy/luci-app-ddns-go.git
 
 # passwall
 rm -rf feeds/packages/net/{xray-core,v2ray-geodata,sing-box,chinadns-ng,dns2socks,hysteria,ipt2socks,microsocks,naiveproxy,shadowsocks-libev,shadowsocks-rust,shadowsocksr-libev,simple-obfs,tcping,trojan-plus,tuic-client,v2ray-plugin,xray-plugin,geoview,shadow-tls}
